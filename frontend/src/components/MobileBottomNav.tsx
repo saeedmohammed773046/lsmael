@@ -13,8 +13,8 @@ interface MobileBottomNavProps {
 }
 
 export default function MobileBottomNav({
-  phone = '777949658',
-  whatsapp = '777949658',
+  phone = '773046703',
+  whatsapp = '773046703',
 }: MobileBottomNavProps) {
   const pathname = usePathname();
   const { cartCount, openDrawer } = useBookingCart();

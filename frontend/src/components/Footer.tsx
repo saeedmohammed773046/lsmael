@@ -8,9 +8,9 @@ import IsmailLogo from './IsmailLogo';
 export default function Footer({ settings }: { settings?: SiteSettings }) {
   const storeName = settings?.storeName || 'إسماعيل للأفراح والمناسبات';
   const storeDescription = settings?.storeDescription || 'الوجهة الأولى لتجهيز وتأجير مستلزمات الأفراح والمناسبات الملكية بأعلى معايير الفخامة والتميز.';
-  const phone = settings?.phone || '777949658';
-  const whatsapp = settings?.whatsapp || '777949658';
-  const email = settings?.email || 'info@ismail-events.com';
+  const phone = settings?.phone || '773046703';
+  const whatsapp = settings?.whatsapp || '773046703';
+  const email = settings?.email || 'ismail@gmail.com';
   const address = settings?.address || 'اليمن - حضرموت - غيل باوزير - مقابل مؤسسة الروضة الاجتماعية';
   const mapUrl = settings?.googleMapsUrl || 'https://maps.app.goo.gl/iyqpwTHeUATydqmH8';
 

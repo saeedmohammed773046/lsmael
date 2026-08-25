@@ -36,7 +36,7 @@ export default function BookingModal({
   isOpen,
   onClose,
   product,
-  whatsapp = '777949658',
+  whatsapp = '773046703',
 }: BookingModalProps) {
   const { customer, updateCustomerProfile, addToCart } = useBookingCart();
 

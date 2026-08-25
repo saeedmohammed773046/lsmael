@@ -30,8 +30,8 @@ interface BookingCartDrawerProps {
 }
 
 export default function BookingCartDrawer({
-  storeWhatsApp = '777949658',
-  storePhone = '777949658',
+  storeWhatsApp = '773046703',
+  storePhone = '773046703',
 }: BookingCartDrawerProps) {
   const {
     items,

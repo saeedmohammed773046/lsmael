@@ -16,7 +16,7 @@ interface HeroProps {
 export default function Hero({
   title = 'أفراحكم تكتمل بأرقى التجهيزات والخيام الملكية',
   subtitle = 'نوفر أحدث الخيام، الطرابيل، السجاد، مستلزمات الضيافة العربية، والجلسات لجميع المناسبات بأفضل الأسعار وأعلى جودة.',
-  whatsapp = '777949658',
+  whatsapp = '773046703',
   onOpenBooking,
 }: HeroProps) {
   return (

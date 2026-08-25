@@ -16,8 +16,8 @@ interface NavbarProps {
 }
 
 export default function Navbar({
-  phone = '777949658',
-  whatsapp = '777949658',
+  phone = '773046703',
+  whatsapp = '773046703',
   storeName = 'إسماعيل للأفراح والمناسبات',
 }: NavbarProps) {
   const pathname = usePathname();
