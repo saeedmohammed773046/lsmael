@@ -18,24 +18,29 @@ export default function Footer({ settings }: { settings?: SiteSettings }) {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-obsidian-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pb-12 border-b border-obsidian-700">
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-gold-500 to-gold-300 flex items-center justify-center text-obsidian-900 shadow-md">
-                <Sparkles className="w-6 h-6" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-gold-500 to-gold-300 flex items-center justify-center text-obsidian-900 shadow-md shrink-0">
+                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <span className="text-xl font-bold text-white font-sans">
-                {storeName}
-              </span>
+              <div className="min-w-0">
+                <span className="text-lg sm:text-xl font-bold text-white font-sans block leading-tight">
+                  {storeName}
+                </span>
+                <span className="text-[11px] font-semibold text-gold-400 block mt-0.5">
+                  تجهيز ومستلزمات الأفراح
+                </span>
+              </div>
             </div>
-            <p className="text-sm text-cream-200/80 leading-relaxed">
+            <p className="text-xs sm:text-sm text-cream-200/80 leading-relaxed">
               {storeDescription}
             </p>
-            <div className="pt-2">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-gold-950/80 text-gold-400 border border-gold-800">
-                <span className="w-2 h-2 rounded-full bg-gold-400"></span>
-                خدمة وضيافة تليق بأفراحكم
+            <div className="pt-1">
+              <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-gold-950/80 text-gold-400 border border-gold-800 max-w-full">
+                <span className="w-2 h-2 rounded-full bg-gold-400 shrink-0"></span>
+                <span>خدمة وضيافة تليق بأفراحكم ومناسباتكم</span>
               </span>
             </div>
           </div>

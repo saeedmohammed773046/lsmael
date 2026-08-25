@@ -53,7 +53,7 @@ export default async function HomePage() {
             <p className="text-obsidian-600 text-sm">جاري تحميل الأقسام وتحديث الكتالوج...</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
             {categories.slice(0, 8).map((cat) => (
               <CategoryCard key={cat.id} category={cat} />
             ))}
@@ -64,14 +64,14 @@ export default async function HomePage() {
       {/* 3. Featured Products Section */}
       {featuredProducts.length > 0 && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-cream-100 via-white to-cream-100 rounded-3xl p-6 sm:p-10 border border-gold-300 shadow-sm">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-8">
+          <div className="bg-gradient-to-br from-cream-100 via-white to-cream-100 rounded-3xl p-4 sm:p-10 border border-gold-300 shadow-sm">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div>
                 <div className="inline-flex items-center gap-1.5 text-gold-700 font-bold text-xs tracking-wider mb-2">
                   <Star className="w-4 h-4 fill-gold-500 text-gold-500" />
                   <span>مختارات مميزة</span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-black text-obsidian-900">
+                <h2 className="text-xl sm:text-3xl font-black text-obsidian-900">
                   أبرز تجهيزات الأفراح الملكية
                 </h2>
               </div>
@@ -84,7 +84,7 @@ export default async function HomePage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {featuredProducts.map((product) => (
                 <ProductCard
                   key={product.id}
@@ -99,13 +99,13 @@ export default async function HomePage() {
 
       {/* 4. Latest Products Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 sm:gap-4 mb-6 sm:mb-8">
           <div>
             <div className="inline-flex items-center gap-1.5 text-gold-600 font-bold text-xs tracking-wider mb-2">
               <Sparkles className="w-4 h-4" />
               <span>جديد المستلزمات</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-obsidian-900">
+            <h2 className="text-xl sm:text-3xl font-black text-obsidian-900">
               أحدث الأصناف المضافة للكتالوج
             </h2>
           </div>
@@ -118,7 +118,7 @@ export default async function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {latestProducts.map((product) => (
             <ProductCard
               key={product.id}

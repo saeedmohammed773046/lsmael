@@ -77,18 +77,18 @@ export default function Navbar({
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 sm:h-20 gap-2">
           {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-gold-600 via-gold-400 to-gold-300 flex items-center justify-center shadow-md shadow-gold-500/20 group-hover:scale-105 transition-transform">
-              <Sparkles className="w-6 h-6 text-obsidian-900" />
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0 min-w-0">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-gold-600 via-gold-400 to-gold-300 flex items-center justify-center shadow-md shadow-gold-500/20 group-hover:scale-105 transition-transform shrink-0">
+              <Sparkles className="w-5 h-5 text-obsidian-900" />
             </div>
-            <div>
-              <span className="block text-xl sm:text-2xl font-bold tracking-tight text-obsidian-900 font-sans group-hover:text-gold-600 transition-colors">
+            <div className="min-w-0">
+              <span className="block text-sm sm:text-xl lg:text-2xl font-extrabold tracking-tight text-obsidian-900 font-sans group-hover:text-gold-600 transition-colors leading-tight truncate">
                 إسماعيل للأفراح
               </span>
-              <span className="block text-xs font-semibold text-gold-600 tracking-wider">
+              <span className="block text-[9px] sm:text-xs font-bold text-gold-600 tracking-tight sm:tracking-wider leading-none mt-0.5 truncate">
                 والمناسبات ومستلزماتها
               </span>
             </div>

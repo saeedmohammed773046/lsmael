@@ -28,25 +28,24 @@ export default function Hero({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Content Column */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-right">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-100 border border-gold-300 text-gold-900 text-xs sm:text-sm font-bold shadow-sm animate-pulse">
-              <Sparkles className="w-4 h-4 text-gold-600" />
-              <span>إسماعيل للأفراح والمناسبات ومستلزمات الضيافة</span>
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-gold-100 border border-gold-300 text-gold-950 text-[11px] sm:text-sm font-black shadow-xs max-w-full">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-600 shrink-0" />
+              <span className="truncate sm:whitespace-normal">إسماعيل للأفراح والمناسبات ومستلزماتها</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-obsidian-900 leading-tight tracking-tight">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-obsidian-900 leading-snug sm:leading-tight tracking-tight">
               {title}
             </h1>
 
-            <p className="text-base sm:text-lg text-obsidian-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-sm sm:text-lg text-obsidian-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               {subtitle}
             </p>
 
             {/* Main Action Buttons */}
-            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-4 w-full sm:w-auto">
               <Link
                 href="/products"
-                className="px-7 py-3.5 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 hover:from-gold-700 hover:to-gold-600 text-obsidian-950 font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all active:scale-95 flex items-center gap-2 text-sm sm:text-base"
+                className="w-full sm:w-auto justify-center px-6 py-3.5 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 hover:from-gold-700 hover:to-gold-600 text-obsidian-950 font-black rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2 text-sm sm:text-base"
               >
                 <span>تصفح كتالوج الأصناف</span>
                 <ArrowLeft className="w-4 h-4" />
@@ -55,14 +54,14 @@ export default function Hero({
               {onOpenBooking ? (
                 <button
                   onClick={onOpenBooking}
-                  className="px-7 py-3.5 bg-obsidian-900 hover:bg-obsidian-800 text-gold-300 font-bold rounded-2xl shadow-md transition-all active:scale-95 text-sm sm:text-base border border-gold-500/30"
+                  className="w-full sm:w-auto justify-center px-6 py-3.5 bg-obsidian-900 hover:bg-obsidian-800 text-gold-300 font-bold rounded-xl sm:rounded-2xl shadow-md transition-all active:scale-95 text-sm sm:text-base border border-gold-500/30"
                 >
                   طلب حجز وتجهيز
                 </button>
               ) : (
                 <Link
                   href="/contact"
-                  className="px-7 py-3.5 bg-obsidian-900 hover:bg-obsidian-800 text-gold-300 font-bold rounded-2xl shadow-md transition-all active:scale-95 text-sm sm:text-base border border-gold-500/30"
+                  className="w-full sm:w-auto justify-center px-6 py-3.5 bg-obsidian-900 hover:bg-obsidian-800 text-gold-300 font-bold rounded-xl sm:rounded-2xl shadow-md transition-all active:scale-95 text-sm sm:text-base border border-gold-500/30 flex items-center"
                 >
                   طلب حجز وتجهيز
                 </Link>
@@ -73,7 +72,7 @@ export default function Hero({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent('WHATSAPP_CLICK')}
-                className="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-md transition-all active:scale-95 flex items-center gap-2 text-sm sm:text-base"
+                className="w-full sm:w-auto justify-center px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl sm:rounded-2xl shadow-md transition-all active:scale-95 flex items-center gap-2 text-sm sm:text-base"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>استفسار واتساب</span>
