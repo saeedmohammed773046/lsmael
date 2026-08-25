@@ -32,12 +32,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     return <>{children}</>;
   }
 
-  if (loading) {
+  if (loading || !user) {
     return (
-      <div className="min-h-screen bg-cream-50 flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center space-y-3">
           <div className="w-12 h-12 border-4 border-gold-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
-          <p className="text-xs font-bold text-obsidian-700">جاري التحقق من الصلاحيات...</p>
+          <p className="text-xs font-bold text-obsidian-700">جاري التحقق وتوجيهك لصفحة تسجيل الدخول...</p>
         </div>
       </div>
     );

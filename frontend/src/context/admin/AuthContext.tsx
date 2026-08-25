@@ -41,23 +41,28 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return;
       }
 
-      const token = localStorage.getItem('ismail_admin_token');
-      if (!token) {
-        setLoading(false);
-        router.push('/admin/login');
-        return;
-      }
-
-      try {
-        const res = await adminFetch('/auth/me');
-        if (res.success && res.data) {
-          setUser(res.data);
-        } else {
-          logout();
+      if (pathname.startsWith('/admin')) {
+        const token = localStorage.getItem('ismail_admin_token');
+        if (!token) {
+          setUser(null);
+          setLoading(false);
+          router.replace('/admin/login');
+          return;
         }
-      } catch {
-        logout();
-      } finally {
+
+        try {
+          const res = await adminFetch('/auth/me');
+          if (res.success && res.data) {
+            setUser(res.data);
+          } else {
+            logout();
+          }
+        } catch {
+          logout();
+        } finally {
+          setLoading(false);
+        }
+      } else {
         setLoading(false);
       }
     };

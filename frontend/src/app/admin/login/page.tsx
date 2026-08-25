@@ -6,8 +6,8 @@ import { useAuth } from '../../../context/admin/AuthContext';
 
 export default function LoginPage() {
   const { login } = useAuth();
-  const [email, setEmail] = useState('admin@ismail-events.com');
-  const [password, setPassword] = useState('admin123456');
+  const [email, setEmail] = useState('admin@gmail.com');
+  const [password, setPassword] = useState('admin12345');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -76,7 +76,7 @@ export default function LoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@ismail-events.com"
+                placeholder="admin@gmail.com"
                 className="w-full pr-10 pl-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-gold-500 outline-none"
               />
             </div>
@@ -93,7 +93,7 @@ export default function LoginPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="admin123456"
+                placeholder="admin12345"
                 className="w-full pr-10 pl-10 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-gold-500 outline-none text-left font-mono"
                 dir="ltr"
               />

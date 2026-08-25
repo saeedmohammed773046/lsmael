@@ -6,10 +6,10 @@ export async function bootstrapDatabase() {
   try {
     console.log('🔄 Checking database initial state...');
 
-    // 1. Ensure Admin User exists
-    const passwordHash = await bcrypt.hash('admin123456', 10);
+    // 1. Ensure Admin User exists (admin@gmail.com / admin12345)
+    const passwordHash = await bcrypt.hash('admin12345', 10);
     const admin = await prisma.user.upsert({
-      where: { email: 'admin@ismail-events.com' },
+      where: { email: 'admin@gmail.com' },
       update: {
         name: 'إدارة إسماعيل للأفراح',
         passwordHash,
@@ -17,7 +17,7 @@ export async function bootstrapDatabase() {
       },
       create: {
         name: 'إدارة إسماعيل للأفراح',
-        email: 'admin@ismail-events.com',
+        email: 'admin@gmail.com',
         passwordHash,
         role: Role.ADMIN,
         isActive: true,

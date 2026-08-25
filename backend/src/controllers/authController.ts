@@ -27,15 +27,15 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       where: { email },
     });
 
-    // If initial database has no admin, automatically create the default admin
-    if (!user && email === 'admin@ismail-events.com') {
+    // If initial database has no admin, automatically create the default admin (admin@gmail.com)
+    if (!user && (email === 'admin@gmail.com' || email === 'admin@ismail-events.com')) {
       const adminCount = await prisma.user.count({ where: { role: 'ADMIN' } });
       if (adminCount === 0) {
-        const passwordHash = await bcrypt.hash('admin123456', 10);
+        const passwordHash = await bcrypt.hash('admin12345', 10);
         user = await prisma.user.create({
           data: {
             name: 'إدارة إسماعيل للأفراح',
-            email: 'admin@ismail-events.com',
+            email,
             passwordHash,
             role: 'ADMIN',
             isActive: true,
