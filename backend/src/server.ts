@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import routes from './routes';
 import { errorHandler } from './middleware/errorHandler';
+import { bootstrapDatabase } from './utils/bootstrap';
 
 dotenv.config();
 
@@ -50,13 +51,16 @@ app.use('/api', routes);
 app.use(errorHandler);
 
 // Start server
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`=======================================================`);
   console.log(` Ismail Wedding & Events API Server running on port ${PORT}`);
   console.log(` Base API URL: https://ismael-backend.onrender.com/api`);
   console.log(` Static Uploads: https://ismael-backend.onrender.com/uploads`);
   console.log(` Environment: ${process.env.NODE_ENV || 'production'}`);
   console.log(`=======================================================`);
+  
+  // Auto-bootstrap admin user, settings, and categories if database is empty
+  await bootstrapDatabase();
 });
 
 export default app;
