@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://ismael-backend.onrender.com/api';
 
 export function trackEvent(eventType: 'PRODUCT_VIEW' | 'WHATSAPP_CLICK' | 'PHONE_CLICK' | 'BOOKING_CREATED' | 'CATEGORY_VIEW' | 'GALLERY_VIEW', referenceId?: string, metadata?: any) {
   if (typeof window === 'undefined') return;
