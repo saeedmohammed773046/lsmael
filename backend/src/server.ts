@@ -17,7 +17,7 @@ app.use(helmet({
   crossOriginResourcePolicy: { policy: 'cross-origin' },
 }));
 
-const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:3000,http://localhost:3001,http://localhost:3002')
+const allowedOrigins = (process.env.CORS_ORIGINS || 'https://ismael-frontend.onrender.com,https://ismael-admin.onrender.com,*')
   .split(',')
   .map((o) => o.trim());
 
@@ -53,9 +53,9 @@ app.use(errorHandler);
 app.listen(PORT, () => {
   console.log(`=======================================================`);
   console.log(` Ismail Wedding & Events API Server running on port ${PORT}`);
-  console.log(` Base API URL: http://localhost:${PORT}/api`);
-  console.log(` Static Uploads: http://localhost:${PORT}/uploads`);
-  console.log(` Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(` Base API URL: https://ismael-backend.onrender.com/api`);
+  console.log(` Static Uploads: https://ismael-backend.onrender.com/uploads`);
+  console.log(` Environment: ${process.env.NODE_ENV || 'production'}`);
   console.log(`=======================================================`);
 });
 

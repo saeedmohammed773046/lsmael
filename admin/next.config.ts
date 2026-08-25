@@ -8,8 +8,12 @@ const nextConfig: NextConfig = {
         hostname: 'images.unsplash.com',
       },
       {
-        protocol: 'http',
-        hostname: 'localhost',
+        protocol: 'https',
+        hostname: 'ismael-backend.onrender.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.onrender.com',
       },
     ],
   },

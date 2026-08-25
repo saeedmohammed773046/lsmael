@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { fetchCategories, fetchProducts } from '../lib/api';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ismael-frontend.onrender.com';
 
   const [categories, { products }] = await Promise.all([
     fetchCategories(),
