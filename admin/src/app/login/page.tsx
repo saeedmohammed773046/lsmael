@@ -3,11 +3,12 @@
 import React, { useState } from 'react';
 import { Lock, Mail, Sparkles, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import IsmailLogo from '../../components/IsmailLogo';
 
 export default function LoginPage() {
   const { login } = useAuth();
-  const [email, setEmail] = useState('admin@ismail-events.com');
-  const [password, setPassword] = useState('admin123456');
+  const [email, setEmail] = useState('admin@gmail.com');
+  const [password, setPassword] = useState('admin12345');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -44,15 +45,10 @@ export default function LoginPage() {
         {/* Glow */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-gold-400/10 rounded-full blur-2xl pointer-events-none"></div>
 
-        {/* Header */}
-        <div className="text-center space-y-2">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-gold-600 via-gold-500 to-gold-400 text-obsidian-950 flex items-center justify-center mx-auto shadow-lg">
-            <Sparkles className="w-7 h-7" />
-          </div>
-          <h1 className="text-2xl font-black text-white">
-            إسماعيل للأفراح
-          </h1>
-          <p className="text-xs text-gold-300">
+        {/* Header with Official Ismail Logo */}
+        <div className="text-center space-y-2 pb-2">
+          <IsmailLogo variant="full" size="md" theme="light" />
+          <p className="text-xs text-gray-500 font-semibold mt-1">
             لوحة تسجيل دخول الإدارة والتحكم في النظام
           </p>
         </div>
