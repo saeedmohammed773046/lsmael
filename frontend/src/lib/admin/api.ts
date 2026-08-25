@@ -1,5 +1,5 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
-const ASSETS_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://ismael-backend.onrender.com/api';
+const ASSETS_BASE = process.env.NEXT_PUBLIC_API_BASE || 'https://ismael-backend.onrender.com';
 
 export function getFullImageUrl(imagePath?: string | null): string {
   if (!imagePath) return 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=400&q=80';
