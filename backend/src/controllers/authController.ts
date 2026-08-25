@@ -23,9 +23,26 @@ export const login = async (req: Request, res: Response): Promise<void> => {
 
     const { email, password } = parseResult.data;
 
-    const user = await prisma.user.findUnique({
+    let user = await prisma.user.findUnique({
       where: { email },
     });
+
+    // If initial database has no admin, automatically create the default admin
+    if (!user && email === 'admin@ismail-events.com') {
+      const adminCount = await prisma.user.count({ where: { role: 'ADMIN' } });
+      if (adminCount === 0) {
+        const passwordHash = await bcrypt.hash('admin123456', 10);
+        user = await prisma.user.create({
+          data: {
+            name: 'إدارة إسماعيل للأفراح',
+            email: 'admin@ismail-events.com',
+            passwordHash,
+            role: 'ADMIN',
+            isActive: true,
+          },
+        });
+      }
+    }
 
     if (!user || !user.isActive) {
       res.status(401).json({
@@ -163,3 +180,21 @@ export const updateProfile = async (req: AuthRequest, res: Response): Promise<vo
     });
   }
 };
+
+export const setupInitialData = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { bootstrapDatabase } = await import('../utils/bootstrap');
+    await bootstrapDatabase();
+    res.json({
+      success: true,
+      message: 'تم تجهيز قاعدة البيانات وإنشاء حساب المدير والأقسام بنجاح',
+    });
+  } catch (error: any) {
+    res.status(500).json({
+      success: false,
+      message: 'حدث خطأ أثناء تهيئة البيانات',
+      error: error.message,
+    });
+  }
+};
+
