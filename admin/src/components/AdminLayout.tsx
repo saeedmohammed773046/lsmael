@@ -54,7 +54,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     { label: 'الملف الشخصي', href: '/account', icon: User },
   ];
 
-  const frontendUrl = process.env.NEXT_PUBLIC_FRONTEND_URL || 'https://ismael-frontend.onrender.com';
+  const frontendUrl = process.env.NEXT_PUBLIC_FRONTEND_URL || 'https://ismael-w3h7.onrender.com';
 
   return (
     <div className="min-h-screen bg-[#F8F9FA] flex flex-col lg:flex-row text-obsidian-900 font-sans">

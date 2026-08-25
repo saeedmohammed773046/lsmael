@@ -17,7 +17,7 @@ app.use(helmet({
   crossOriginResourcePolicy: { policy: 'cross-origin' },
 }));
 
-const allowedOrigins = (process.env.CORS_ORIGINS || 'https://ismael-frontend.onrender.com,https://ismael-admin.onrender.com,*')
+const allowedOrigins = (process.env.CORS_ORIGINS || 'https://ismael-w3h7.onrender.com,https://ismael-frontend-w3h7.onrender.com,*')
   .split(',')
   .map((o) => o.trim());
 
