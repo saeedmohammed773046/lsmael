@@ -7,6 +7,7 @@ import { Sparkles, Phone, MessageCircle, Heart, Search, Menu, X, ShoppingBag } f
 import { useFavorites } from './FavoritesProvider';
 import { useBookingCart } from './BookingCartProvider';
 import { trackEvent } from '../lib/analytics';
+import IsmailLogo from './IsmailLogo';
 
 interface NavbarProps {
   phone?: string;
@@ -80,18 +81,8 @@ export default function Navbar({
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20 gap-2">
           {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0 min-w-0">
-            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-gold-600 via-gold-400 to-gold-300 flex items-center justify-center shadow-md shadow-gold-500/20 group-hover:scale-105 transition-transform shrink-0">
-              <Sparkles className="w-5 h-5 text-obsidian-900" />
-            </div>
-            <div className="min-w-0">
-              <span className="block text-sm sm:text-xl lg:text-2xl font-extrabold tracking-tight text-obsidian-900 font-sans group-hover:text-gold-600 transition-colors leading-tight truncate">
-                إسماعيل للأفراح
-              </span>
-              <span className="block text-[9px] sm:text-xs font-bold text-gold-600 tracking-tight sm:tracking-wider leading-none mt-0.5 truncate">
-                والمناسبات ومستلزماتها
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group shrink-0 min-w-0">
+            <IsmailLogo variant="horizontal" size="sm" theme="light" />
           </Link>
 
           {/* Desktop Nav Links */}

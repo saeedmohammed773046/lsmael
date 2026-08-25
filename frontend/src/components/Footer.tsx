@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Sparkles, Phone, MessageCircle, Mail, MapPin, Clock, Heart } from 'lucide-react';
 import { SiteSettings } from '../types';
 
+import IsmailLogo from './IsmailLogo';
+
 export default function Footer({ settings }: { settings?: SiteSettings }) {
   const storeName = settings?.storeName || 'إسماعيل للأفراح والمناسبات';
   const storeDescription = settings?.storeDescription || 'الوجهة الأولى لتجهيز وتأجير مستلزمات الأفراح والمناسبات الملكية بأعلى معايير الفخامة والتميز.';
@@ -21,19 +23,7 @@ export default function Footer({ settings }: { settings?: SiteSettings }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pb-12 border-b border-obsidian-700">
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-gold-500 to-gold-300 flex items-center justify-center text-obsidian-900 shadow-md shrink-0">
-                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
-              </div>
-              <div className="min-w-0">
-                <span className="text-lg sm:text-xl font-bold text-white font-sans block leading-tight">
-                  {storeName}
-                </span>
-                <span className="text-[11px] font-semibold text-gold-400 block mt-0.5">
-                  تجهيز ومستلزمات الأفراح
-                </span>
-              </div>
-            </div>
+            <IsmailLogo variant="horizontal" size="md" theme="dark" />
             <p className="text-xs sm:text-sm text-cream-200/80 leading-relaxed">
               {storeDescription}
             </p>

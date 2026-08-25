@@ -20,6 +20,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { useAuth } from '../../context/admin/AuthContext';
+import IsmailLogo from '../IsmailLogo';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -80,14 +81,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       >
         <div className="p-5 space-y-6 overflow-y-auto">
           {/* Brand */}
-          <div className="flex items-center gap-3 pb-5 border-b border-gray-200">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-gold-500 to-gold-400 text-black flex items-center justify-center font-bold shadow-sm">
-              <Sparkles className="w-5 h-5" />
-            </div>
-            <div>
-              <h2 className="text-base font-extrabold text-black">إسماعيل للأفراح</h2>
-              <span className="text-[12px] text-gray-700 block font-bold">لوحة الإدارة والتحكم</span>
-            </div>
+          <div className="flex items-center pb-4 border-b border-gray-200">
+            <IsmailLogo variant="horizontal" size="sm" theme="light" />
           </div>
 
           {/* Links */}
