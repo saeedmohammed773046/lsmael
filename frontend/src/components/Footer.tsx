@@ -11,8 +11,8 @@ export default function Footer({ settings }: { settings?: SiteSettings }) {
   const phone = settings?.phone || '777949658';
   const whatsapp = settings?.whatsapp || '777949658';
   const email = settings?.email || 'info@ismail-events.com';
-  const address = settings?.address || 'اليمن - خدمات التوصيل والتجهيز لكافة المحافظات والمناسبات';
-  const mapUrl = settings?.googleMapsUrl || 'https://maps.google.com';
+  const address = settings?.address || 'اليمن - حضرموت - غيل باوزير - مقابل مؤسسة الروضة الاجتماعية';
+  const mapUrl = settings?.googleMapsUrl || 'https://maps.app.goo.gl/iyqpwTHeUATydqmH8';
 
   return (
     <footer className="bg-obsidian-900 text-cream-100 pt-16 pb-24 lg:pb-12 border-t-2 border-gold-500/40 relative overflow-hidden">

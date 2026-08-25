@@ -106,7 +106,7 @@ export async function fetchSettings(): Promise<SiteSettings> {
       whatsapp: '777949658',
       secondaryPhone: '771446446',
       email: 'info@ismail-events.com',
-      address: 'اليمن - خدمات التوصيل والتجهيز لكافة المحافظات والمناسبات',
+      address: 'اليمن - حضرموت - غيل باوزير - مقابل مؤسسة الروضة الاجتماعية',
       googleMapsUrl: 'https://maps.google.com',
       aboutUsText: 'إسماعيل للأفراح والمناسبات خياركم الأمثل لتجهيز كافة المناسبات.',
       workingHours: '{}',
