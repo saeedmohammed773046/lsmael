@@ -21,13 +21,20 @@ router.use('/settings', settingRoutes);
 router.use('/analytics', analyticsRoutes);
 router.use('/admin/upload', uploadRoutes);
 
-// Health check endpoint
+// Lightweight Cron / Health check endpoints for keep-alive
+router.get('/cron', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+  res.status(200).send('OK');
+});
+
+router.head('/cron', (req, res) => {
+  res.status(200).end();
+});
+
 router.get('/health', (req, res) => {
-  res.json({
-    status: 'ok',
-    timestamp: new Date().toISOString(),
-    service: 'Ismail Wedding & Events API',
-  });
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.status(200).send('OK');
 });
 
 export default router;

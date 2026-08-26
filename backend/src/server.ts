@@ -44,6 +44,20 @@ app.use(morgan('dev'));
 const uploadsPath = path.join(process.cwd(), 'uploads');
 app.use('/uploads', express.static(uploadsPath));
 
+// Lightweight Cron / Keep-Alive root endpoints
+app.get('/cron', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+  res.status(200).send('OK');
+});
+app.head('/cron', (req, res) => {
+  res.status(200).end();
+});
+app.get('/health', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.status(200).send('OK');
+});
+
 // Mount REST API
 app.use('/api', routes);
 
