@@ -398,7 +398,7 @@ export default function BookingCartDrawer({
                             dir="ltr"
                             value={customer.phone}
                             onChange={(e) => updateCustomerProfile({ phone: e.target.value })}
-                            placeholder="777949658"
+                            placeholder="773046703"
                             className="w-full pr-9 pl-3 py-2 text-xs bg-white border border-gold-200 rounded-xl focus:outline-none focus:border-gold-500 text-left font-mono"
                           />
                         </div>

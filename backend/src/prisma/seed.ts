@@ -72,7 +72,7 @@ async function main() {
       data: { key, value },
     });
   }
-  console.log('Site Settings Seeded with Official Numbers (777949658 / 771446446)');
+  console.log('Site Settings Seeded with Official Numbers (773046703 / 701896696)');
 
   // 3. Official Categories
   const categoriesData = [

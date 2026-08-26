@@ -11,6 +11,13 @@ export function getFullImageUrl(imagePath?: string | null): string {
   return `${ASSETS_BASE}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
 }
 
+export function formatWhatsAppUrl(phone: string, text?: string): string {
+  const digits = phone.replace(/[^0-9]/g, '');
+  const normalized = digits.startsWith('967') ? digits : `967${digits.replace(/^0+/, '')}`;
+  const textParam = text ? `?text=${encodeURIComponent(text)}` : '';
+  return `https://wa.me/${normalized}${textParam}`;
+}
+
 export async function fetchCategories(): Promise<Category[]> {
   try {
     const res = await fetch(`${API_BASE}/categories`, { cache: 'no-store' });
